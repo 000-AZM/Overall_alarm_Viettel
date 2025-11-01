@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  table {
+    border-collapse: collapse;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+  }
+  th, td {
+    border: 2px solid #000;
+    padding: 3px 6px;
+  }
+
+  /* Header row */
+  .title {
+    background: #d9ead3;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    color: black;
+  }
+
+  /* Section headers */
+  .team { background: #92d050; }
+  .tco { background: #92d050; font-weight: bold; }
+  .mytel { background: #92d050; font-weight: bold; }
+  .site { background: #92d050; font-weight: bold; }
+  .status { background: #92d050; font-weight: bold; }
+  .dg { background: #92d050; font-weight: bold; }
+
+  /* Sub headers */
+  .subhead { background: #92d050; font-weight: bold; }
+
+  /* Footer total */
+  .total { background: #92d050; font-weight: bold; }
+
+  /* Column groups */
+  .group-tco { background: #92d050; }
+
+  .group-mytel { background: #92d050; }
+  .group-total { background: #92d050; }
+  .group-site { background: #92d050; }
+  .group-status { background: red; color: yellow;}
+
+  .group-status-a { background: yellow;}
+   .group-status-b { background: #b4c6e7;}
+  
+  .group-dg { background: yellow; color: red;}
+   .group-dg-a { background: #ffc000; }
+
+
+  /* Customization */
+   .t1 { background: orange; color: white;}
+ 
+   .t2 { background: #ddebf7; }
+ 
+   .t3 { background: rgb(229, 229, 120);}
+   .t4 { background: #e2efda;}
+  
+   .t5 { background: #f8cbad;}
+    .t6 { background: #d6dce4;}
+    .t7 { background: #d6dce4; color: red;}
+
+
+  .header-bar {
+    background: #92d050;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #000;
+    padding: 6px;
+  }
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th colspan="25" class="header-bar" id="time">--:--:---- --:--:--</th>
+  </tr>
+
+  <tr class="title">
+    <th rowspan="3" class="team">Team</th>
+    <th colspan="2" class="tco">TCO</th>
+    <th colspan="2" class="mytel">MYTEL</th>
+    <th colspan="2" class="mytel">Total</th>
+    <th colspan="2" class="site">Site</th>
+    <th colspan="13" class="status">Site down status</th>
+    <th colspan="3" class="dg">DG</th>
+  </tr>
+
+  <tr class="subhead">
+    <th rowspan="2" class="group-tco">AC Main Fails_TowerCo.</th>
+    
+    <th rowspan="2" class="group-tco">Low alarm_TowerCo.</th>
+    <th  rowspan="2" class="group-mytel">Mains Failure</th>
+    <th  rowspan="2" class="group-mytel">DC Voltage Low</th>
+    <th  rowspan="2" class="group-total">Sites Grid cut</th>
+    <th  rowspan="2" class="group-total">DC Low alarm</th>
+    <th  rowspan="2" class="group-site">Total site</th>
+    <th  rowspan="2" class="group-site">Site Grid only</th>
+    <th colspan="3" class="group-status">Total Site down</th>
+    <th colspan="6" class="group-status-a">Down time remain</th>
+    <th rowspan="2" class="group-status">SRT+ OLT down</th>
+    <th colspan="3" class="group-status-b">Prioritize</th>
+    <th  rowspan="2" class="group-dg">Alarm &gt;24h + DG.Stop</th>
+    <th  rowspan="2" class="group-dg">DG Manual Mode</th>
+    <th  rowspan="2" class="group-dg-a">DG.Abnormal Alarm</th>
+  </tr>
+
+  <tr class="subhead">
+   
+    <th class="group-status">Total</th>
+    <th class="group-status">Mytel</th>
+    <th class="group-status">TCo</th>
+    <th class="group-status-a">&lt;=4h</th>
+    <th class="group-status-a">&gt;4h-8h</th>
+    <th class="group-status-a">&gt;8-12h</th>
+    <th class="group-status-a">&gt;12-16h</th>
+    <th class="group-status-a">&gt;16-24h</th>
+    <th class="group-status-a">&gt;24h</th>
+    <th class="group-status-b">Priority 1</th>
+    <th class="group-status-b">Priority 2</th>
+    <th class="group-status-b">Priority 3</th>
+    
+  </tr>
+
+  <tr>
+    <td>MYT_WBG_TEAM01</td><td class="t1">21</td><td class="t1">5</td><td class="t2">11</td><td class="t2">1</td><td class="t3">32</td><td class="t3">6</td><td class="t4">105</td><td class="t4">6</td><td class="t5">1</td><td class="t5">1</td><td class="t5">0</td><td class="t6">1</td><td class="t6">0</td><td class="t6">0</td><td class="t6">0</td><td class="t6">0</td><td class="t6">0</td><td class="t5">1</td><td class="t3">1</td><td class="t3">0</td><td class="t3">0</td><td class="t5">0</td><td class="t5">0</td><td class="t7">1</td>
+  </tr>
+  <tr>
+    <td>MYT_WBG_TEAM02</td><td class="t1">13</td><td class="t1">3</td><td class="t2">15</td><td class="t2">1</td><td class="t3">28</td><td class="t3">4</td><td class="t4">94</td><td class="t4">9</td><td class="t5">2</td><td class="t5">1</td><td class="t5">1</td><td class="t6">0</td><td class="t6">0</td><td class="t6">0</td><td class="t6">0</td><td class="t6">0</td><td class="t6">2</td><td class="t5">0</td><td class="t3">0</td><td class="t3">0</td><td class="t3">2</td><td class="t5">0</td><td class="t5">0</td><td class="t7">4</td>
+  </tr>
+  <tr>
+    <td>MYT_WBG_TEAM03</td><td class="t1">22</td><td class="t1">12</td><td class="t2">3</td><td class="t2">0</td><td class="t3">25</td><td class="t3">12</td><td class="t4">110</td><td class="t4">9</td><td class="t5">4</td><td class="t5">0</td><td class="t5">4</td><td class="t6">2</td><td class="t6">0</td><td class="t6">0</td><td class="t6">0</td><td class="t6">0</td><td class="t6">2</td><td class="t5">0</td><td class="t3">0</td><td class="t3">2</td><td class="t3">2</td><td class="t5">0</td><td class="t5">0</td><td class="t7">0</td>
+  </tr>
+  <tr>
+    <td>MYT_WBG_TEAM04</td><td class="t1">22</td><td class="t1">3</td><td class="t2">14</td><td class="t2">0</td><td class="t3">36</td><td class="t3">3</td><td class="t4">85</td><td class="t4">2</td><td class="t5">0</td><td class="t5">0</td><td class="t5">0</td><td class="t6">0</td><td class="t6">0</td><td class="t6">0</td><td class="t6">0</td><td class="t6">0</td><td class="t6">0</td><td class="t5">0</td><td class="t3">0</td><td class="t3">0</td><td class="t3">0</td><td class="t5">0</td><td class="t5">0</td><td class="t7">0</td>
+  </tr>
+  <tr class="total">
+    <td>WBG</td><td>78</td><td>23</td><td>43</td><td>2</td><td>121</td><td>25</td><td>394</td><td>26</td><td>7</td><td>2</td><td>5</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>1</td><td>1</td><td>2</td><td>4</td><td>0</td><td>0</td><td>5</td>
+  </tr>
+</table>
+
+<script>
+function updateDateTime() {
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const year = now.getFullYear();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  
+  const formatted =`WBG Report Site down, Exported Time : ${day}:${month}:${year} ${hours}:${minutes}:${seconds} (date format: dd/MM/yyyy HH:mm:ss)`;
+  document.getElementById("time").textContent = formatted;
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+</body>
+</html>
