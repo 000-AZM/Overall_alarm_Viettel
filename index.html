@@ -169,6 +169,8 @@
   <input type="text" id="newValue" style="width:100px;">
   <button onclick="editCell()">Apply</button>
   <button onclick="saveAsImage()">Save as Image</button>
+  <button onclick="switchToLandscape()">📱 Landscape Mode</button>
+
 </div>
 
 <!-- ===== JS ===== -->
@@ -253,6 +255,18 @@ function saveAsImage() {
   });
 }
 
+async function switchToLandscape() {
+  if (screen.orientation && screen.orientation.lock) {
+    try {
+      await screen.orientation.lock("landscape");
+      alert("Switched to landscape mode ✅");
+    } catch (err) {
+      alert("Your browser doesn’t allow automatic rotation.\nPlease rotate your phone manually 📲");
+    }
+  } else {
+    alert("Landscape mode lock not supported on this device.\nTry rotating your phone manually 📲");
+  }
+}
 
 </script>
 
